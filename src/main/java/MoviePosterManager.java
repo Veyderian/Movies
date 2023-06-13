@@ -1,5 +1,7 @@
 public class MoviePosterManager {
+
     public int limit;
+
     private String[] movies = new String[0];
 
 
