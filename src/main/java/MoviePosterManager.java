@@ -1,26 +1,37 @@
 public class MoviePosterManager {
-
-    public int limit;
-
+    private int limit;
     private String[] movies = new String[0];
 
+    public int getLimit() {
+        return limit;
+    }
 
-    public MoviePosterManager() {
+    public void setLimit(int limit) {
+        this.limit = limit;
+    }
+
+    public String[] getMovies() {
+        return movies;
+    }
+
+    public void setMovies(String[] movies) {
+        this.movies = movies;
+    }
+
+      public MoviePosterManager() {
         this.limit = 5;
 
     }
 
     public MoviePosterManager(int limit) {
+
         this.limit = limit;
     }
 
 
     public void add(String movie) {
-
-
         String[] tmp = new String[movies.length + 1];
         for (int i = 0; i < movies.length; i++) {
-
             tmp[i] = movies[i];
 
         }
@@ -43,10 +54,8 @@ public class MoviePosterManager {
         String[] tmp = new String[resultLength];
         for (int i = 0; i < tmp.length; i++) {
             tmp[i] = movies[movies.length - 1 - i];
-
         }
         return movies;
-
     }
 }
 

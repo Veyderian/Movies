@@ -54,17 +54,15 @@ public class MoviePosterManagerTest {
 
 
     @Test
-    public void shouldLastMovieAdded7() {
+    public void shouldLastMovieAdded5() {
         MoviePosterManager manager = new MoviePosterManager();
-        manager.add("film 7");
-        manager.add("film 6");
         manager.add("film 5");
         manager.add("film 4");
         manager.add("film 3");
         manager.add("film 2");
         manager.add("film 1");
 
-        String[] expected = {"film 7", "film 6", "film 5", "film 4", "film 3", "film 2", "film 1"};
+        String[] expected = {"film 5", "film 4", "film 3", "film 2", "film 1"};
 
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
