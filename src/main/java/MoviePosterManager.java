@@ -2,6 +2,16 @@ public class MoviePosterManager {
     private int limit;
     private String[] movies = new String[0];
 
+    public MoviePosterManager() {
+        this.limit = 5;
+
+    }
+
+    public MoviePosterManager(int limit) {
+
+        this.limit = limit;
+    }
+
     public int getLimit() {
         return limit;
     }
@@ -17,17 +27,6 @@ public class MoviePosterManager {
     public void setMovies(String[] movies) {
         this.movies = movies;
     }
-
-      public MoviePosterManager() {
-        this.limit = 5;
-
-    }
-
-    public MoviePosterManager(int limit) {
-
-        this.limit = limit;
-    }
-
 
     public void add(String movie) {
         String[] tmp = new String[movies.length + 1];
