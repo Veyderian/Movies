@@ -13,18 +13,22 @@ public class MoviePosterManager {
     }
 
     public int getLimit() {
+
         return limit;
     }
 
     public void setLimit(int limit) {
+
         this.limit = limit;
     }
 
     public String[] getMovies() {
+
         return movies;
     }
 
     public void setMovies(String[] movies) {
+
         this.movies = movies;
     }
 
@@ -54,7 +58,7 @@ public class MoviePosterManager {
         for (int i = 0; i < tmp.length; i++) {
             tmp[i] = movies[movies.length - 1 - i];
         }
-        return movies;
+        return tmp;
     }
 }
 
